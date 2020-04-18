@@ -1,5 +1,5 @@
 <?php
-  include 'connecdeux.php';
+  include 'connec.php';
 ?>
 
 <html>
@@ -23,7 +23,7 @@
    		
 
  
-    		<input type="submit" value="Subscribe!">
+    		<input type="submit" value="ajoute!">
 
 		</form>
 

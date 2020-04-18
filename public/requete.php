@@ -1,5 +1,5 @@
 <?php
-include_once 'connecdeux.php';
+include_once 'connec.php';
 
 $pdo = new \PDO(DSN, USER, PASS);
 
@@ -31,15 +31,21 @@ $tab = $statement->fetchAll();
 	    		echo"</tr>";
 	    	}
 	        ?>
-	   		
-	    </tbody>
+	   	</tbody>
+	   	<?php
+		$query = "SELECT SUM(payment) FROM bribe" ;
+		$statement = $pdo->query($query);
+		$somme = $statement->fetch();
+		?>	
+		<tfoot>
+		<tr>
+			<th> Total</th>
+			<td><?php echo $somme['SUM(payment)']; ?><td>
+				<!--SUM(payment) -->
+		</tr>
+		</tfoot>
+
 	</table>
 	</body>
 </html>
 
-<?php
-$query = "SELECT SUM(payment)" ;
-$statement = $pdo->query($query);
-$somme = $statement->fetch();
-var_dump($somme);
-?>

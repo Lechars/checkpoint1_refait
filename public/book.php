@@ -17,15 +17,18 @@
         <div class= "contain_whisky">
             <img src="image/whisky.png" alt="a whisky glass" class="whisky"/>
             <img src="image/empty_whisky.png" alt="an empty whisky glass" class="empty-whisky"/>
-        </div
+        </div>
 
         <div class="pages">
             <div class="page leftpage">
                 Add a bribe
                 <!-- TODO : Form -->
+                <?php include 'addabribe.php'; ?>
             </div>
 
             <div class="page rightpage">
+
+                <?php include 'requete.php'; ?>
                 <!-- TODO : Display bribes and total paiement -->
             </div>
         </div>
